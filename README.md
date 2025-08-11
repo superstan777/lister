@@ -1,7 +1,6 @@
 # Lister — Simple and Efficient List & Device Manager
 
-![Lister Logo](./assets/icon.png)  
-_A minimalist mobile app for managing lists and their devices, with quick adding and data export features._
+_A minimalist mobile app for managing lists and their devices, with quick data export features and built-in codes scanner._
 
 ---
 
@@ -83,4 +82,3 @@ Lister is a lightweight React Native (Expo) mobile app designed to help you crea
    ```
 
 4. **Run the app on your device or simulator**
-# lister
