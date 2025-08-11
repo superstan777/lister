@@ -1,50 +1,86 @@
-# Welcome to your Expo app 👋
+# Lister — Simple and Efficient List & Device Manager
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+![Lister Logo](./assets/icon.png)  
+_A minimalist mobile app for managing lists and their devices, with quick adding and data export features._
 
-## Get started
+---
 
-1. Install dependencies
+## Table of Contents
+
+- [Project Overview](#project-overview)
+- [Features](#features)
+- [Technologies](#technologies)
+- [Architecture](#architecture)
+- [Installation & Running](#installation--running)
+
+---
+
+## Project Overview
+
+Lister is a lightweight React Native (Expo) mobile app designed to help you create and manage lists and the devices assigned to them. With a clean and intuitive interface, users can easily create new lists, add devices manually or by scanning QR codes, delete items, and export lists as plain text summaries.
+
+---
+
+## Features
+
+- **Create and manage multiple lists**
+- **Add devices to lists manually or via QR code scanning**
+- **Delete lists and devices**
+- **Export lists as plain text for easy sharing or copying**
+- **User-friendly UI with floating action buttons (scan, export, close)**
+- **Local storage with SQLite for fast and offline access**
+- **Modern navigation using Expo Router with modals and stack navigation**
+
+---
+
+## Technologies
+
+- **React Native** — Cross-platform mobile development framework
+- **Expo & Expo Router** — Tools for fast development and intuitive navigation
+- **Expo SQLite** — Local device database for persistent storage
+- **React Native SwipeListView** — Swipeable list items with delete actions
+- **TypeScript** — Type safety and improved developer experience
+- **Ionicons** — Vector icon library for consistent UI elements
+
+---
+
+## Architecture
+
+- **RootLayout.tsx** — Main layout with navigation stack and global header button logic
+- **Screens:**
+  - `index` — Overview of all lists
+  - `list/[listId]` — Detail view showing devices in a selected list
+  - `createListScreen` — Modal for creating a new list
+  - `cameraScreen` — QR code scanner for adding devices
+  - `exportScreen` — Modal for exporting list data
+- **Components:**
+  - `HeaderButton` — Consistent header buttons (back, add, close)
+  - `RoundButton` — Circular action buttons (scan, export, close)
+  - `ListItem`, `DeviceItem` — Individual list and device components
+  - `EmptyList`, `ListHiddenItem` — UI for empty states and swipe-to-delete actions
+
+---
+
+## Installation & Running
+
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/superstan777/lister
+   cd lister
+   ```
+
+2. **Install dependencies**
 
    ```bash
    npm install
    ```
 
-2. Start the app
+3. **Start the app**
 
    ```bash
    npx expo start
    ```
 
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+4. **Run the app on your device or simulator**
+# lister
